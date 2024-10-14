@@ -11,6 +11,9 @@ public class PaymentRequestDto {
     @NotBlank(message = "Soyad mütləqdir")
     private String surname;
 
+    @NotBlank(message = "Id")
+    private Long userId;
+
     @NotBlank(message = "Email mütləqdir")
     @Size(max = 255)
     @Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$", message = "Email adresiniz yanlışdır") //ifadələrmi yanlışdır?
@@ -41,4 +44,5 @@ public class PaymentRequestDto {
     private String cvc;
 
 
+    
 }
